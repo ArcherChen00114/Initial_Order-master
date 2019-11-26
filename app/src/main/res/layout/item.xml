@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/border"
+    android:elevation="8dp">
+
+    <com.mcxtzhang.swipemenulib.SwipeMenuLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin = "1dp"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <Switch
+                android:id="@+id/Icon"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="16dp"
+                />
+
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/Icon"
+                android:text="@string/Name"
+                android:layout_centerVertical="true"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <ProgressBar
+                android:id="@+id/HpBar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:max="100"
+                android:layout_toEndOf="@+id/Name"
+                />
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/HpBar"/>
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/Add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/HpBar"
+                android:layout_alignRight="@+id/HpBar"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                app:backgroundTint="?attr/colorControlHighlight"
+                app:srcCompat="@drawable/ic_add_black_24dp" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/Minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/HpBar"
+                android:layout_alignLeft="@+id/HpBar"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                app:backgroundTint="@android:color/transparent"
+                app:srcCompat="@drawable/ic_indeterminate_check_box_black_24dp" />
+
+            <TextView
+                android:id="@+id/HP"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/Minus"
+                android:layout_toStartOf="@+id/Add"
+                android:text="TextView" />
+
+        </RelativeLayout>
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/btnDelete"
+            app:bootstrapBrand="danger"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:text="删除"
+            android:textColor="@android:color/white"/>
+
+    </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/modify_reflx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

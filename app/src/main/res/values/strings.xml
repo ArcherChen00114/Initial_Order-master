@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="Name">Name</string>
+    <string name="ID">ID</string>
+    <string name="action_settings">Settings</string>
+
+        <item type="id" name="tag_first"/>
+        <item type="id" name="tag_second"/>
+        <item type="id" name="tag_id"/>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schemas.android.com/apk/res/android ">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:id="@+id/Input_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/Icon"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="3dp"
+            android:hint="角色名"
+            android:layout_weight="1"
+            android:inputType="textEmailAddress"
+            />
+
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:id="@+id/Input_HP"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:layout_toEndOf="@+id/Input_name"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="3dp"
+            android:hint=" H P "
+            android:inputType="number"
+            android:digits="0123456789" />
+
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:id="@+id/Input_Con"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/Icon"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="3dp"
+            android:hint="体质"
+            android:inputType="textEmailAddress"
+            />
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:id="@+id/Input_Inti"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/Input_HP"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="3dp"
+            android:digits="0123456789"
+            android:hint="先攻"
+            android:inputType="number" />
+
+
+    </LinearLayout>
+</LinearLayout>

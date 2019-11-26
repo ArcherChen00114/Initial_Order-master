@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.example.archer.myapplication"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        release {
+            storeFile file("myreleasekey.keystore")
+            v2SigningEnabled false
+        }
+    }
+        buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api 'com.android.support:appcompat-v7:28.0.0'
+    api 'com.android.support.constraint:constraint-layout:1.0.2'
+    api 'com.android.support:design:28.0.0'
+    api 'junit:junit:4.12'
+    api 'com.android.support.test:runner:0.5'
+    api 'com.android.support.test.espresso:espresso-core:2.2.2'
+    api 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    api 'com.beardedhen:androidbootstrap:2.3.2'
+    api 'com.polyak:icon-switch:1.0.0'
+}
